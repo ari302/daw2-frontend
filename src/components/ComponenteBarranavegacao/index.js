@@ -60,7 +60,7 @@ function Componentebarra() {
       <AppBar
        position="static"
          sx={{
-            backgroundColor:"violet"
+            backgroundColor:"#FA9E17"
          }}
       
       >

@@ -7,27 +7,26 @@ import { CardActionArea } from '@mui/material';
 
 
 function ComponenteCard() {
-    return (
-      <Card sx={{ maxWidth: 345 }}>
+  return (
+    <Card sx={{ maxWidth: 6000 }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          height="600"
+          image="https://portal.ufcg.edu.br/images/2020.2/campina.jpg"
           alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            Campina Grande
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          Campina Grande é um município brasileiro no estado da Paraíba. Considerada um dos principais polos industriais da Região Nordeste.
           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
   );
 }
- 
- export default ComponenteCard;
+
+export default ComponenteCard;
