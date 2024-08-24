@@ -1,13 +1,23 @@
-import React from "react"
+import React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
 
 import'./style.css'
 import { colors } from "@mui/material";
@@ -55,12 +65,52 @@ const Search = styled('div')(({ theme }) => ({
  }));
 
 function Componentebarra() {
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
+
+  const DrawerList = (
+    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+      <List>
+        {['Atrações Turisticas', 'Hoteis', 'Restaurantes', 'Sobre'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {[].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
     return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
        position="static"
          sx={{
+<<<<<<< Updated upstream
             backgroundColor:"#FA9E17"
+=======
+            backgroundColor:"#EB9F6E"
+>>>>>>> Stashed changes
          }}
       
       >
@@ -70,14 +120,18 @@ function Componentebarra() {
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2 }} 
+            onClick={toggleDrawer(true)}          
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton >
+          <Drawer open={open} onClose={toggleDrawer(false)}>
+            {DrawerList}
+          </Drawer>
           <Typography
             variant="h6"
             noWrap
-            component="div"
+            component="txt"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
             Travel Explorer
@@ -93,6 +147,7 @@ function Componentebarra() {
           </Search>
         </Toolbar>
       </AppBar>
+      
     </Box>
     );
  }

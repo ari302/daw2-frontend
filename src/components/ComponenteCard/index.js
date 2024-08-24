@@ -7,8 +7,13 @@ import { CardActionArea } from '@mui/material';
 
 
 function ComponenteCard() {
+<<<<<<< Updated upstream
   return (
     <Card sx={{ maxWidth: 6000 }}>
+=======
+    return (
+      <Card sx={{ maxWidth: 6000 }}>
+>>>>>>> Stashed changes
       <CardActionArea>
         <CardMedia
           component="img"
@@ -21,7 +26,11 @@ function ComponenteCard() {
             Campina Grande
           </Typography>
           <Typography variant="body2" color="text.secondary">
+<<<<<<< Updated upstream
           Campina Grande é um município brasileiro no estado da Paraíba. Considerada um dos principais polos industriais da Região Nordeste.
+=======
+          i> class Campina Grande é um município brasileiro no estado da Paraíba. Considerada um dos principais polos industriais da Região Nordeste
+>>>>>>> Stashed changes
           </Typography>
         </CardContent>
       </CardActionArea>
