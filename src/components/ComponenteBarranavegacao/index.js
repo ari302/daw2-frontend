@@ -19,6 +19,9 @@ import ListItemText from '@mui/material/ListItemText';
 /*import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';*/
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import RoomServicecoIn from '@mui/icons-material/RoomService';
+import ArticleIcon from '@mui/icons-material/Article';
+import HotelIcon from '@mui/icons-material/Hotel';
 
 
 import './style.css'
@@ -80,7 +83,10 @@ function Componentebarra() {
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <LocationOnIcon /> : <MailIcon />}
+                {text === "Atrações Turisticas" ? <LocationOnIcon /> : null}
+                {text === "Hoteis" ? <HotelIcon /> : null}
+                {text === "Restaurantes" ? <RoomServicecoIn /> : null}
+                {text === "Sobre" ? <ArticleIcon /> : null}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -93,7 +99,10 @@ function Componentebarra() {
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {text === "Atrações Turisticas" ? <LocationOnIcon /> : null}
+                {text === "Hoteis" ? <HotelIcon /> : null}
+                {text === "Restaurantes" ? <RoomServicecoIn /> : null}
+                {text === "Sobre" ? <ArticleIcon /> : null}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>

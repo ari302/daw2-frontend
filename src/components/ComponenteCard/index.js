@@ -12,16 +12,14 @@ function ComponenteCard() {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="600"
+          height="1000"
           image="https://portal.ufcg.edu.br/images/2020.2/campina.jpg"
           alt="Campina"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Campina Grande
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          Campina Grande é um município brasileiro no estado da Paraíba. Considerada um dos principais polos industriais da Região Nordeste.
           </Typography>
         </CardContent>
       </CardActionArea>
