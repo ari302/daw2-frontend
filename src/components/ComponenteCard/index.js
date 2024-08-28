@@ -7,27 +7,24 @@ import { CardActionArea } from '@mui/material';
 
 
 function ComponenteCard() {
-    return (
-      <Card sx={{ maxWidth: 345 }}>
+  return (
+    <Card sx={{ maxWidth: 6000 }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
+          height="1000"
+          image="https://portal.ufcg.edu.br/images/2020.2/campina.jpg"
+          alt="Campina"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
   );
 }
- 
- export default ComponenteCard;
+
+export default ComponenteCard;
