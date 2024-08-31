@@ -1,19 +1,24 @@
-import React from "react"
-import Componentebarra from "../../components/ComponenteBarranavegacao";
-import ComponenteCard from "../../components/ComponenteCard";
-import ComponenteSobre from "../../components/ComponenteSobre";
-import Imagem from "../../assets/images/campina.jpg"
-import { Box, Grid } from "@mui/material";
-import { Repeat } from "@mui/icons-material";
+import React from "react";
+import ImagemPrincipal from "../../components/ComponenteImagem"
+import ComponenteBarra from "../../components/ComponenteBarra";
 
 function PaginaPrincipal() {
+
    return (
-      <div>
-         <h1>
-            <Componentebarra />
-         </h1>
-      </div>
+
+      <ImagemPrincipal>
+         <ComponenteBarra />
+      </ImagemPrincipal>
+
+
+
    );
+
+
 }
+
+
+
+
 
 export default PaginaPrincipal; 

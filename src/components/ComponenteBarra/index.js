@@ -67,7 +67,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-function Componentebarra() {
+function ComponenteBarra() {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -157,6 +157,6 @@ function Componentebarra() {
   );
 }
 
-export default Componentebarra;
+export default ComponenteBarra;
 
 
