@@ -13,12 +13,5 @@ function PaginaPrincipal() {
 
 
    );
-
-
 }
-
-
-
-
-
 export default PaginaPrincipal; 

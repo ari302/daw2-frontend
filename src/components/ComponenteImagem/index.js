@@ -23,6 +23,4 @@ function ImagemPrincipal({ children }) {
         </Grid>
     )
 }
-
-
 export default ImagemPrincipal;
