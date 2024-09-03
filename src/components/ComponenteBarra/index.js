@@ -9,7 +9,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
@@ -23,7 +22,6 @@ import HotelIcon from '@mui/icons-material/Hotel';
 
 
 import './style.css'
-import { colors } from "@mui/material";
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
