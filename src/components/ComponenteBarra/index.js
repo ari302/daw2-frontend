@@ -20,8 +20,11 @@ import RoomServicecoIn from '@mui/icons-material/RoomService';
 import ArticleIcon from '@mui/icons-material/Article';
 import HotelIcon from '@mui/icons-material/Hotel';
 
+import{useNavigate} from 'react-router-dom'
 
 import './style.css'
+ 
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -66,6 +69,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 function ComponenteBarra() {
+
+  const navigate = useNavigate();
+
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -113,7 +119,7 @@ function ComponenteBarra() {
       <AppBar
         position="static"
         sx={{
-          backgroundColor: "#ffbba8"
+          backgroundColor:"purple"
         }}
 
       >
