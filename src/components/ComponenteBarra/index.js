@@ -19,7 +19,6 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import RoomServicecoIn from '@mui/icons-material/RoomService';
 import ArticleIcon from '@mui/icons-material/Article';
 import HotelIcon from '@mui/icons-material/Hotel';
-
 import{useNavigate} from 'react-router-dom'
 
 import './style.css'
@@ -119,7 +118,7 @@ function ComponenteBarra() {
       <AppBar
         position="static"
         sx={{
-          backgroundColor:"purple"
+          backgroundColor:"#24139f"
         }}
 
       >
