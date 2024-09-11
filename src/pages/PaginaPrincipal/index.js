@@ -26,6 +26,7 @@ function PaginaPrincipal() {
 
    const [option, setOption] = useState("HOTEL")
    
+   
    return (
 
       <ImagemPrincipal>
