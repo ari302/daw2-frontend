@@ -6,20 +6,21 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 
-function ComponenteCard() {
+function ComponenteCard(props) {
+
+  const { nome, localizacao } = props;
+
   return (
-    <Card sx={{ maxWidth: 500 }}>
+    <Card sx={{ width: "100px", height: "50px" }}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="1000"
-          image="https://portal.ufcg.edu.br/images/2020.2/campina.jpg"
-          alt="Campina"
-        />
+
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
+            {nome}
+            alagoinha
           </Typography>
           <Typography variant="body2" color="text.secondary">
+            {localizacao}
           </Typography>
         </CardContent>
       </CardActionArea>

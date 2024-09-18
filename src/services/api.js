@@ -1,4 +1,4 @@
-import { TravelExplore } from "@mui/icons-material";
+import { TravelExplorer } from "@mui/icons-material";
 import axios from "axios";
 
 const api = axios.create({

@@ -17,12 +17,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import RoomServicecoIn from '@mui/icons-material/RoomService';
-import ArticleIcon from '@mui/icons-material/Article';
 import HotelIcon from '@mui/icons-material/Hotel';
-import{useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import './style.css'
- 
+
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -67,7 +66,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-function ComponenteBarra() {
+function ComponenteBarra(props) {
+
+  const { option, setOption } = props;
 
   const navigate = useNavigate();
 
@@ -80,14 +81,13 @@ function ComponenteBarra() {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {['Atrações Turisticas', 'Hoteis', 'Restaurantes', 'Sobre'].map((text, index) => (
+        {['Atrações Turisticas', 'Hoteis', 'Restaurantes'].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={() => { setOption(text) }}>
               <ListItemIcon>
                 {text === "Atrações Turisticas" ? <LocationOnIcon /> : null}
                 {text === "Hoteis" ? <HotelIcon /> : null}
                 {text === "Restaurantes" ? <RoomServicecoIn /> : null}
-                {text === "Sobre" ? <ArticleIcon /> : null}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -98,12 +98,11 @@ function ComponenteBarra() {
       <List>
         {[].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={() => { setOption(text) }}>
               <ListItemIcon>
                 {text === "Atrações Turisticas" ? <LocationOnIcon /> : null}
                 {text === "Hoteis" ? <HotelIcon /> : null}
                 {text === "Restaurantes" ? <RoomServicecoIn /> : null}
-                {text === "Sobre" ? <ArticleIcon /> : null}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -118,7 +117,7 @@ function ComponenteBarra() {
       <AppBar
         position="static"
         sx={{
-          backgroundColor:"#24139f"
+          backgroundColor: "#24139f"
         }}
 
       >
